@@ -1,0 +1,140 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Crash Course Tutorial</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- div is the different division--> 
+    <div class="navbar">
+        <!-- to come out with the container can use ".container"--> 
+        <div class="container">
+            <a class="logo" href="#">Remember<span>That</span></a>
+
+            <img id="mobile-cta" class="mobile-menu" src="image/menu.svg" alt="Open Navigation">
+
+            <nav>
+                <img id="mobile-exit" class="mobile-menu-exit" src="image/exit.svg" alt="Close Navigation">
+                <ul class="primary-nav">
+                    <Li class="current"><a href="#">Home</a></Li>
+                    <Li><a href="#">Features</a></Li>
+                    <Li><a href="#">Pricing</a></Li>
+                </ul>
+
+                <ul class="secondary-nav">
+                    <Li><a href="#">Contact</a></Li>
+                    <Li class="go-premium-cta"><a href="#">Go Premium</a></Li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+<!-- Hero is usually the first thing people see below the navigation bar--> 
+    <section class="hero">
+        <div class="container">
+            <div class="left-col">
+                <!-- When you wanna display & in the words you need to use &amp; --> 
+                <p class="subhead">It's Nitty &amp; Gritty</p>
+                <h1>A Task App That Doesn't Stink</h1>
+
+                <div class="hero-cta">
+                    <!-- # because for now we dont want it to go anywhere otherwise its a hyperlink--> 
+                    <a href="#" class="primary-cta">Try for free</a>
+                    <a href="#" class="watch-video-cta">
+                        <!-- Images are usually saveds as svg file and link to where you saved them--> 
+                        <img src="image/watch.svg" alt="Watch a video">Watch a video
+                    </a>
+
+                </div>
+            </div>
+            <img src="image/illustration.svg" class="hero-img" alt="illustration">
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="container">
+            <ul class="features-list">
+                <li>Unlimited Tasks</li>
+                <li>SMS Task Reminders</li>
+                <li>COnfetti Explosions upon Task Completion</li>
+                <li>Social Media Annoucements</li>
+                <li>Real Time Collaboration</li>
+                <li>Other Awesome Features</li>
+            </ul>
+
+            <img src="image/holding-phone.jpg" alt="Man holding phone">
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <ul>
+                <li>
+                    <img src="image/person.jpg" alt="Person">
+
+                    <blockquote>Bla Bla Bla 1</blockquote>
+                    <cite>- Jane Doe</cite>
+                </li>
+
+                <li>
+                    <img src="image/person.jpg" alt="Person">
+
+                    <blockquote>Bla Bla Bla 2</blockquote>
+                    <cite>- Jane Doe</cite>
+                </li>
+
+                <li>
+                    <img src="image/person.jpg" alt="Person">
+
+                    <blockquote>Bla Bla Bla 3</blockquote>
+                    <cite>- Jane Doe</cite>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-left">
+                <h2>Contact</h2>
+
+                <form action="">
+                    <label for="name">Name</label>
+                    <!-- Place holder is the background text when people never type anything--> 
+                    <input type="text" id="name" name="name" placeholder="Your Name">
+
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+                    <input type="submit" class="send-message-cta" value="Send message">
+                </form>
+            </div>
+
+            <div class="contact-right">
+                <!-- Maps can be embedded means need go google maps press share press embbed map then copy and paste the link --> 
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.631840594962!2d103.74756299999996!3d1.3973396999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da11f3f59d3353%3A0xafade1e5ad9e3e67!2sYew%20Tee%20Stn!5e0!3m2!1sen!2ssg!4v1643957315042!5m2!1sen!2ssg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> 
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+
+        const mobileBtn = document.getElementById('mobile-cta')
+            nav = document.querySelector('nav')
+            mobileBtnExit = document.getElementById('mobile-exit');
+
+        mobileBtn.addEventListener('click', () => {
+            nav.classList.add('menu-btn');
+        })      
+        
+        mobileBtnExit.addEventListener('click', () => {
+            nav.classList.remove('menu-btn');
+        })       
+        
+
+    </script>
+</body>
+</html>
